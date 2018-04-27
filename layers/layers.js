@@ -20,22 +20,22 @@ jsonSource_LimiteDepartamental_0.addFeatures(features_LimiteDepartamental_0);var
                 source:jsonSource_LimiteDepartamental_0, 
                 style: style_LimiteDepartamental_0,
                 title: '<img src="styles/legend/LimiteDepartamental_0.png" /> Limite Departamental'
-            });var format_PreciosporDepartamento4SemanadeAbril2018_1 = new ol.format.GeoJSON();
-var features_PreciosporDepartamento4SemanadeAbril2018_1 = format_PreciosporDepartamento4SemanadeAbril2018_1.readFeatures(json_PreciosporDepartamento4SemanadeAbril2018_1, 
+            });var format_PreciosporDepartamento4SemanadeAbril_1 = new ol.format.GeoJSON();
+var features_PreciosporDepartamento4SemanadeAbril_1 = format_PreciosporDepartamento4SemanadeAbril_1.readFeatures(json_PreciosporDepartamento4SemanadeAbril_1, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_PreciosporDepartamento4SemanadeAbril2018_1 = new ol.source.Vector({
+var jsonSource_PreciosporDepartamento4SemanadeAbril_1 = new ol.source.Vector({
     attributions: [new ol.Attribution({html: '<a href=""></a>'})],
 });
-jsonSource_PreciosporDepartamento4SemanadeAbril2018_1.addFeatures(features_PreciosporDepartamento4SemanadeAbril2018_1);var lyr_PreciosporDepartamento4SemanadeAbril2018_1 = new ol.layer.Vector({
+jsonSource_PreciosporDepartamento4SemanadeAbril_1.addFeatures(features_PreciosporDepartamento4SemanadeAbril_1);var lyr_PreciosporDepartamento4SemanadeAbril_1 = new ol.layer.Vector({
                 declutter: true,
-                source:jsonSource_PreciosporDepartamento4SemanadeAbril2018_1, 
-                style: style_PreciosporDepartamento4SemanadeAbril2018_1,
-    title: 'Precios por Departamento-4 Semana de Abril-2018<br />\
-    <img src="styles/legend/PreciosporDepartamento4SemanadeAbril2018_1_0.png" />  1520 - 1790 <br />\
-    <img src="styles/legend/PreciosporDepartamento4SemanadeAbril2018_1_1.png" />  1790 - 2050 <br />\
-    <img src="styles/legend/PreciosporDepartamento4SemanadeAbril2018_1_2.png" />  2050 - 2320 <br />\
-    <img src="styles/legend/PreciosporDepartamento4SemanadeAbril2018_1_3.png" />  2320 - 2580 <br />\
-    <img src="styles/legend/PreciosporDepartamento4SemanadeAbril2018_1_4.png" />  2580 - 2850 <br />'
+                source:jsonSource_PreciosporDepartamento4SemanadeAbril_1, 
+                style: style_PreciosporDepartamento4SemanadeAbril_1,
+    title: 'Precios por Departamento-4 Semana de Abril<br />\
+    <img src="styles/legend/PreciosporDepartamento4SemanadeAbril_1_0.png" />  1520 - 1790 <br />\
+    <img src="styles/legend/PreciosporDepartamento4SemanadeAbril_1_1.png" />  1790 - 2050 <br />\
+    <img src="styles/legend/PreciosporDepartamento4SemanadeAbril_1_2.png" />  2050 - 2320 <br />\
+    <img src="styles/legend/PreciosporDepartamento4SemanadeAbril_1_3.png" />  2320 - 2580 <br />\
+    <img src="styles/legend/PreciosporDepartamento4SemanadeAbril_1_4.png" />  2580 - 2850 <br />'
         });var format_MunicipiosTomadePrecios_2 = new ol.format.GeoJSON();
 var features_MunicipiosTomadePrecios_2 = format_MunicipiosTomadePrecios_2.readFeatures(json_MunicipiosTomadePrecios_2, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
@@ -47,19 +47,33 @@ jsonSource_MunicipiosTomadePrecios_2.addFeatures(features_MunicipiosTomadePrecio
                 source:jsonSource_MunicipiosTomadePrecios_2, 
                 style: style_MunicipiosTomadePrecios_2,
                 title: '<img src="styles/legend/MunicipiosTomadePrecios_2.png" /> Municipios Toma de Precios'
+            });var format_PreciosCuartaSemanadeAbrilde2018_3 = new ol.format.GeoJSON();
+var features_PreciosCuartaSemanadeAbrilde2018_3 = format_PreciosCuartaSemanadeAbrilde2018_3.readFeatures(json_PreciosCuartaSemanadeAbrilde2018_3, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_PreciosCuartaSemanadeAbrilde2018_3 = new ol.source.Vector({
+    attributions: [new ol.Attribution({html: '<a href=""></a>'})],
+});
+jsonSource_PreciosCuartaSemanadeAbrilde2018_3.addFeatures(features_PreciosCuartaSemanadeAbrilde2018_3);var lyr_PreciosCuartaSemanadeAbrilde2018_3 = new ol.layer.Vector({
+                declutter: true,
+                source:jsonSource_PreciosCuartaSemanadeAbrilde2018_3, 
+                style: style_PreciosCuartaSemanadeAbrilde2018_3,
+                title: '<img src="styles/legend/PreciosCuartaSemanadeAbrilde2018_3.png" /> Precios Cuarta Semana de Abril de 2018'
             });
 
-lyr_LimiteDepartamental_0.setVisible(true);lyr_PreciosporDepartamento4SemanadeAbril2018_1.setVisible(true);lyr_MunicipiosTomadePrecios_2.setVisible(true);
-var layersList = [baseLayer,lyr_LimiteDepartamental_0,lyr_PreciosporDepartamento4SemanadeAbril2018_1,lyr_MunicipiosTomadePrecios_2];
+lyr_LimiteDepartamental_0.setVisible(true);lyr_PreciosporDepartamento4SemanadeAbril_1.setVisible(true);lyr_MunicipiosTomadePrecios_2.setVisible(true);lyr_PreciosCuartaSemanadeAbrilde2018_3.setVisible(false);
+var layersList = [baseLayer,lyr_LimiteDepartamental_0,lyr_PreciosporDepartamento4SemanadeAbril_1,lyr_MunicipiosTomadePrecios_2,lyr_PreciosCuartaSemanadeAbrilde2018_3];
 lyr_LimiteDepartamental_0.set('fieldAliases', {'DEPT': 'DEPT', });
-lyr_PreciosporDepartamento4SemanadeAbril2018_1.set('fieldAliases', {'Departamen': 'Departamen', 'Año': 'Año', 'MES': 'MES', 'SEMANA': 'SEMANA', '$ por Kg': '$ por Kg', '$ Prom Año': '$ Prom Año', 'Prom_ Pais': 'Prom_ Pais', });
+lyr_PreciosporDepartamento4SemanadeAbril_1.set('fieldAliases', {'Departamen': 'Departamen', 'Año': 'Año', 'MES': 'MES', 'SEMANA': 'SEMANA', '$ por Kg': '$ por Kg', '$ Prom Año': '$ Prom Año', 'Prom_ Pais': 'Prom_ Pais', });
 lyr_MunicipiosTomadePrecios_2.set('fieldAliases', {'DEPT': 'DEPT', 'MUNICIPIO': 'MUNICIPIO', });
+lyr_PreciosCuartaSemanadeAbrilde2018_3.set('fieldAliases', {'DEPT': 'DEPT', 'MUNICIPIO': 'MUNICIPIO', });
 lyr_LimiteDepartamental_0.set('fieldImages', {'DEPT': 'TextEdit', });
-lyr_PreciosporDepartamento4SemanadeAbril2018_1.set('fieldImages', {'Departamen': 'TextEdit', 'Año': 'TextEdit', 'MES': 'TextEdit', 'SEMANA': 'TextEdit', '$ por Kg': 'TextEdit', '$ Prom Año': 'TextEdit', 'Prom_ Pais': 'TextEdit', });
+lyr_PreciosporDepartamento4SemanadeAbril_1.set('fieldImages', {'Departamen': 'TextEdit', 'Año': 'TextEdit', 'MES': 'TextEdit', 'SEMANA': 'TextEdit', '$ por Kg': 'TextEdit', '$ Prom Año': 'TextEdit', 'Prom_ Pais': 'TextEdit', });
 lyr_MunicipiosTomadePrecios_2.set('fieldImages', {'DEPT': 'TextEdit', 'MUNICIPIO': 'TextEdit', });
+lyr_PreciosCuartaSemanadeAbrilde2018_3.set('fieldImages', {'DEPT': 'TextEdit', 'MUNICIPIO': 'TextEdit', });
 lyr_LimiteDepartamental_0.set('fieldLabels', {'DEPT': 'inline label', });
-lyr_PreciosporDepartamento4SemanadeAbril2018_1.set('fieldLabels', {'Departamen': 'inline label', 'Año': 'inline label', 'MES': 'inline label', 'SEMANA': 'inline label', '$ por Kg': 'inline label', '$ Prom Año': 'inline label', 'Prom_ Pais': 'inline label', });
+lyr_PreciosporDepartamento4SemanadeAbril_1.set('fieldLabels', {'Departamen': 'inline label', 'Año': 'inline label', 'MES': 'inline label', 'SEMANA': 'inline label', '$ por Kg': 'inline label', '$ Prom Año': 'inline label', 'Prom_ Pais': 'inline label', });
 lyr_MunicipiosTomadePrecios_2.set('fieldLabels', {'DEPT': 'inline label', 'MUNICIPIO': 'inline label', });
-lyr_MunicipiosTomadePrecios_2.on('precompose', function(evt) {
+lyr_PreciosCuartaSemanadeAbrilde2018_3.set('fieldLabels', {'DEPT': 'inline label', 'MUNICIPIO': 'inline label', });
+lyr_PreciosCuartaSemanadeAbrilde2018_3.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
