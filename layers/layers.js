@@ -31,11 +31,11 @@ jsonSource_PreciosporDepartamento_1.addFeatures(features_PreciosporDepartamento_
                 source:jsonSource_PreciosporDepartamento_1, 
                 style: style_PreciosporDepartamento_1,
     title: 'Precios por Departamento<br />\
-    <img src="styles/legend/PreciosporDepartamento_1_0.png" />  1460 - 1760 <br />\
-    <img src="styles/legend/PreciosporDepartamento_1_1.png" />  1760 - 2060 <br />\
-    <img src="styles/legend/PreciosporDepartamento_1_2.png" />  2060 - 2350 <br />\
-    <img src="styles/legend/PreciosporDepartamento_1_3.png" />  2350 - 2640 <br />\
-    <img src="styles/legend/PreciosporDepartamento_1_4.png" />  2640 - 2940 <br />'
+    <img src="styles/legend/PreciosporDepartamento_1_0.png" />  1457 - 1741 <br />\
+    <img src="styles/legend/PreciosporDepartamento_1_1.png" />  1741 - 2024 <br />\
+    <img src="styles/legend/PreciosporDepartamento_1_2.png" />  2024 - 2308 <br />\
+    <img src="styles/legend/PreciosporDepartamento_1_3.png" />  2308 - 2591 <br />\
+    <img src="styles/legend/PreciosporDepartamento_1_4.png" />  2591 - 2875 <br />'
         });var format_MunicipiosTomadePrecios_2 = new ol.format.GeoJSON();
 var features_MunicipiosTomadePrecios_2 = format_MunicipiosTomadePrecios_2.readFeatures(json_MunicipiosTomadePrecios_2, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
@@ -47,33 +47,33 @@ jsonSource_MunicipiosTomadePrecios_2.addFeatures(features_MunicipiosTomadePrecio
                 source:jsonSource_MunicipiosTomadePrecios_2, 
                 style: style_MunicipiosTomadePrecios_2,
                 title: '<img src="styles/legend/MunicipiosTomadePrecios_2.png" /> Municipios Toma de Precios'
-            });var format_PreciosQuintaSemanadeAbrilde2018_3 = new ol.format.GeoJSON();
-var features_PreciosQuintaSemanadeAbrilde2018_3 = format_PreciosQuintaSemanadeAbrilde2018_3.readFeatures(json_PreciosQuintaSemanadeAbrilde2018_3, 
+            });var format_PreciosPrimeraSemanadeMayode2018_3 = new ol.format.GeoJSON();
+var features_PreciosPrimeraSemanadeMayode2018_3 = format_PreciosPrimeraSemanadeMayode2018_3.readFeatures(json_PreciosPrimeraSemanadeMayode2018_3, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_PreciosQuintaSemanadeAbrilde2018_3 = new ol.source.Vector({
+var jsonSource_PreciosPrimeraSemanadeMayode2018_3 = new ol.source.Vector({
     attributions: [new ol.Attribution({html: '<a href=""></a>'})],
 });
-jsonSource_PreciosQuintaSemanadeAbrilde2018_3.addFeatures(features_PreciosQuintaSemanadeAbrilde2018_3);var lyr_PreciosQuintaSemanadeAbrilde2018_3 = new ol.layer.Vector({
+jsonSource_PreciosPrimeraSemanadeMayode2018_3.addFeatures(features_PreciosPrimeraSemanadeMayode2018_3);var lyr_PreciosPrimeraSemanadeMayode2018_3 = new ol.layer.Vector({
                 declutter: true,
-                source:jsonSource_PreciosQuintaSemanadeAbrilde2018_3, 
-                style: style_PreciosQuintaSemanadeAbrilde2018_3,
-                title: '<img src="styles/legend/PreciosQuintaSemanadeAbrilde2018_3.png" /> Precios Quinta Semana de Abril de 2018'
+                source:jsonSource_PreciosPrimeraSemanadeMayode2018_3, 
+                style: style_PreciosPrimeraSemanadeMayode2018_3,
+                title: '<img src="styles/legend/PreciosPrimeraSemanadeMayode2018_3.png" /> Precios Primera Semana de Mayo de 2018'
             });
 
-lyr_LimiteDepartamental_0.setVisible(true);lyr_PreciosporDepartamento_1.setVisible(true);lyr_MunicipiosTomadePrecios_2.setVisible(true);lyr_PreciosQuintaSemanadeAbrilde2018_3.setVisible(false);
-var layersList = [baseLayer,lyr_LimiteDepartamental_0,lyr_PreciosporDepartamento_1,lyr_MunicipiosTomadePrecios_2,lyr_PreciosQuintaSemanadeAbrilde2018_3];
+lyr_LimiteDepartamental_0.setVisible(true);lyr_PreciosporDepartamento_1.setVisible(true);lyr_MunicipiosTomadePrecios_2.setVisible(true);lyr_PreciosPrimeraSemanadeMayode2018_3.setVisible(false);
+var layersList = [baseLayer,lyr_LimiteDepartamental_0,lyr_PreciosporDepartamento_1,lyr_MunicipiosTomadePrecios_2,lyr_PreciosPrimeraSemanadeMayode2018_3];
 lyr_LimiteDepartamental_0.set('fieldAliases', {'DEPT': 'DEPT', });
 lyr_PreciosporDepartamento_1.set('fieldAliases', {'Departamen': 'Departamen', 'Año': 'Año', 'MES': 'MES', 'SEMANA': 'SEMANA', '$ por Kg': '$ por Kg', '$ Prom Año': '$ Prom Año', 'Prom_ Pais': 'Prom_ Pais', });
 lyr_MunicipiosTomadePrecios_2.set('fieldAliases', {'DEPT': 'DEPT', 'MUNICIPIO': 'MUNICIPIO', });
-lyr_PreciosQuintaSemanadeAbrilde2018_3.set('fieldAliases', {'DEPT': 'DEPT', 'MUNICIPIO': 'MUNICIPIO', });
+lyr_PreciosPrimeraSemanadeMayode2018_3.set('fieldAliases', {'DEPT': 'DEPT', 'MUNICIPIO': 'MUNICIPIO', });
 lyr_LimiteDepartamental_0.set('fieldImages', {'DEPT': 'TextEdit', });
 lyr_PreciosporDepartamento_1.set('fieldImages', {'Departamen': 'TextEdit', 'Año': 'TextEdit', 'MES': 'TextEdit', 'SEMANA': 'TextEdit', '$ por Kg': 'TextEdit', '$ Prom Año': 'TextEdit', 'Prom_ Pais': 'TextEdit', });
 lyr_MunicipiosTomadePrecios_2.set('fieldImages', {'DEPT': 'TextEdit', 'MUNICIPIO': 'TextEdit', });
-lyr_PreciosQuintaSemanadeAbrilde2018_3.set('fieldImages', {'DEPT': 'TextEdit', 'MUNICIPIO': 'TextEdit', });
+lyr_PreciosPrimeraSemanadeMayode2018_3.set('fieldImages', {'DEPT': 'TextEdit', 'MUNICIPIO': 'TextEdit', });
 lyr_LimiteDepartamental_0.set('fieldLabels', {'DEPT': 'inline label', });
 lyr_PreciosporDepartamento_1.set('fieldLabels', {'Departamen': 'inline label', 'Año': 'inline label', 'MES': 'inline label', 'SEMANA': 'inline label', '$ por Kg': 'inline label', '$ Prom Año': 'inline label', 'Prom_ Pais': 'inline label', });
 lyr_MunicipiosTomadePrecios_2.set('fieldLabels', {'DEPT': 'inline label', 'MUNICIPIO': 'inline label', });
-lyr_PreciosQuintaSemanadeAbrilde2018_3.set('fieldLabels', {'DEPT': 'inline label', 'MUNICIPIO': 'inline label', });
-lyr_PreciosQuintaSemanadeAbrilde2018_3.on('precompose', function(evt) {
+lyr_PreciosPrimeraSemanadeMayode2018_3.set('fieldLabels', {'DEPT': 'inline label', 'MUNICIPIO': 'inline label', });
+lyr_PreciosPrimeraSemanadeMayode2018_3.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
