@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_PreciosPorDepartamento_1 = function(feature, resolution){
+var style_PreciosporDepartamento_1 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
