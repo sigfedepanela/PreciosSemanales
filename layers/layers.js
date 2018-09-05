@@ -31,11 +31,11 @@ jsonSource_PreciosporDepartamento_1.addFeatures(features_PreciosporDepartamento_
                 source:jsonSource_PreciosporDepartamento_1, 
                 style: style_PreciosporDepartamento_1,
     title: 'Precios por Departamento<br />\
-    <img src="styles/legend/PreciosporDepartamento_1_0.png" />  1376 - 1697 <br />\
-    <img src="styles/legend/PreciosporDepartamento_1_1.png" />  1697 - 2018 <br />\
-    <img src="styles/legend/PreciosporDepartamento_1_2.png" />  2018 - 2340 <br />\
-    <img src="styles/legend/PreciosporDepartamento_1_3.png" />  2340 - 2661 <br />\
-    <img src="styles/legend/PreciosporDepartamento_1_4.png" />  2661 - 2982 <br />'
+    <img src="styles/legend/PreciosporDepartamento_1_0.png" />  1200 - 1400 <br />\
+    <img src="styles/legend/PreciosporDepartamento_1_1.png" />  1400 - 1610 <br />\
+    <img src="styles/legend/PreciosporDepartamento_1_2.png" />  1610 - 1820 <br />\
+    <img src="styles/legend/PreciosporDepartamento_1_3.png" />  1820 - 2020 <br />\
+    <img src="styles/legend/PreciosporDepartamento_1_4.png" />  2020 - 2230 <br />'
         });var format_MunicipiosTomadePrecios_2 = new ol.format.GeoJSON();
 var features_MunicipiosTomadePrecios_2 = format_MunicipiosTomadePrecios_2.readFeatures(json_MunicipiosTomadePrecios_2, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
@@ -47,33 +47,33 @@ jsonSource_MunicipiosTomadePrecios_2.addFeatures(features_MunicipiosTomadePrecio
                 source:jsonSource_MunicipiosTomadePrecios_2, 
                 style: style_MunicipiosTomadePrecios_2,
                 title: '<img src="styles/legend/MunicipiosTomadePrecios_2.png" /> Municipios Toma de Precios'
-            });var format_PreciosCuartaSemanadeAgostode2018_3 = new ol.format.GeoJSON();
-var features_PreciosCuartaSemanadeAgostode2018_3 = format_PreciosCuartaSemanadeAgostode2018_3.readFeatures(json_PreciosCuartaSemanadeAgostode2018_3, 
+            });var format_PreciosPrimeraSemanadeSeptiembrede2018_3 = new ol.format.GeoJSON();
+var features_PreciosPrimeraSemanadeSeptiembrede2018_3 = format_PreciosPrimeraSemanadeSeptiembrede2018_3.readFeatures(json_PreciosPrimeraSemanadeSeptiembrede2018_3, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_PreciosCuartaSemanadeAgostode2018_3 = new ol.source.Vector({
+var jsonSource_PreciosPrimeraSemanadeSeptiembrede2018_3 = new ol.source.Vector({
     attributions: [new ol.Attribution({html: '<a href=""></a>'})],
 });
-jsonSource_PreciosCuartaSemanadeAgostode2018_3.addFeatures(features_PreciosCuartaSemanadeAgostode2018_3);var lyr_PreciosCuartaSemanadeAgostode2018_3 = new ol.layer.Vector({
+jsonSource_PreciosPrimeraSemanadeSeptiembrede2018_3.addFeatures(features_PreciosPrimeraSemanadeSeptiembrede2018_3);var lyr_PreciosPrimeraSemanadeSeptiembrede2018_3 = new ol.layer.Vector({
                 declutter: true,
-                source:jsonSource_PreciosCuartaSemanadeAgostode2018_3, 
-                style: style_PreciosCuartaSemanadeAgostode2018_3,
-                title: '<img src="styles/legend/PreciosCuartaSemanadeAgostode2018_3.png" /> Precios Cuarta Semana de Agosto de 2018'
+                source:jsonSource_PreciosPrimeraSemanadeSeptiembrede2018_3, 
+                style: style_PreciosPrimeraSemanadeSeptiembrede2018_3,
+                title: '<img src="styles/legend/PreciosPrimeraSemanadeSeptiembrede2018_3.png" /> Precios Primera Semana de Septiembre de 2018'
             });
 
-lyr_LimiteDepartamental_0.setVisible(true);lyr_PreciosporDepartamento_1.setVisible(true);lyr_MunicipiosTomadePrecios_2.setVisible(true);lyr_PreciosCuartaSemanadeAgostode2018_3.setVisible(false);
-var layersList = [baseLayer,lyr_LimiteDepartamental_0,lyr_PreciosporDepartamento_1,lyr_MunicipiosTomadePrecios_2,lyr_PreciosCuartaSemanadeAgostode2018_3];
+lyr_LimiteDepartamental_0.setVisible(true);lyr_PreciosporDepartamento_1.setVisible(true);lyr_MunicipiosTomadePrecios_2.setVisible(true);lyr_PreciosPrimeraSemanadeSeptiembrede2018_3.setVisible(false);
+var layersList = [baseLayer,lyr_LimiteDepartamental_0,lyr_PreciosporDepartamento_1,lyr_MunicipiosTomadePrecios_2,lyr_PreciosPrimeraSemanadeSeptiembrede2018_3];
 lyr_LimiteDepartamental_0.set('fieldAliases', {'DEPT': 'DEPT', });
 lyr_PreciosporDepartamento_1.set('fieldAliases', {'Departamen': 'Departamen', 'Año': 'Año', 'MES': 'MES', 'SEMANA': 'SEMANA', '$ por Kg': '$ por Kg', '$ Prom Año': '$ Prom Año', 'Prom_ Pais': 'Prom_ Pais', });
 lyr_MunicipiosTomadePrecios_2.set('fieldAliases', {'DEPT': 'DEPT', 'MUNICIPIO': 'MUNICIPIO', });
-lyr_PreciosCuartaSemanadeAgostode2018_3.set('fieldAliases', {'DEPT': 'DEPT', 'MUNICIPIO': 'MUNICIPIO', });
+lyr_PreciosPrimeraSemanadeSeptiembrede2018_3.set('fieldAliases', {'DEPT': 'DEPT', 'MUNICIPIO': 'MUNICIPIO', });
 lyr_LimiteDepartamental_0.set('fieldImages', {'DEPT': 'TextEdit', });
 lyr_PreciosporDepartamento_1.set('fieldImages', {'Departamen': 'TextEdit', 'Año': 'TextEdit', 'MES': 'TextEdit', 'SEMANA': 'TextEdit', '$ por Kg': 'TextEdit', '$ Prom Año': 'TextEdit', 'Prom_ Pais': 'TextEdit', });
 lyr_MunicipiosTomadePrecios_2.set('fieldImages', {'DEPT': 'TextEdit', 'MUNICIPIO': 'TextEdit', });
-lyr_PreciosCuartaSemanadeAgostode2018_3.set('fieldImages', {'DEPT': 'TextEdit', 'MUNICIPIO': 'TextEdit', });
+lyr_PreciosPrimeraSemanadeSeptiembrede2018_3.set('fieldImages', {'DEPT': 'TextEdit', 'MUNICIPIO': 'TextEdit', });
 lyr_LimiteDepartamental_0.set('fieldLabels', {'DEPT': 'inline label', });
 lyr_PreciosporDepartamento_1.set('fieldLabels', {'Departamen': 'inline label', 'Año': 'inline label', 'MES': 'inline label', 'SEMANA': 'inline label', '$ por Kg': 'inline label', '$ Prom Año': 'inline label', 'Prom_ Pais': 'inline label', });
 lyr_MunicipiosTomadePrecios_2.set('fieldLabels', {'DEPT': 'inline label', 'MUNICIPIO': 'inline label', });
-lyr_PreciosCuartaSemanadeAgostode2018_3.set('fieldLabels', {'DEPT': 'inline label', 'MUNICIPIO': 'inline label', });
-lyr_PreciosCuartaSemanadeAgostode2018_3.on('precompose', function(evt) {
+lyr_PreciosPrimeraSemanadeSeptiembrede2018_3.set('fieldLabels', {'DEPT': 'inline label', 'MUNICIPIO': 'inline label', });
+lyr_PreciosPrimeraSemanadeSeptiembrede2018_3.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
