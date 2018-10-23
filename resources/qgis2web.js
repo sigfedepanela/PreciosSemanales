@@ -32,7 +32,7 @@ var map = new ol.Map({
 var layerSwitcher = new ol.control.LayerSwitcher({tipLabel: "Layers"});
 map.addControl(layerSwitcher);
 
-map.getView().fit([-9557639.318782, -468971.312934, -6306467.680640, 1349815.996267], map.getSize());
+map.getView().fit([-9538521.902928, -804725.836309, -5627147.755932, 1348130.606353], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
