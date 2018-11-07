@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_PreciosCuartaSemanadeOctubrede2018_3 = function(feature, resolution){
+var style_PreciosPrimerSemanadeNoviembrede2018_3 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
