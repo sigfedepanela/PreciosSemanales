@@ -3,6 +3,8 @@
 var container = document.getElementById('popup');
 var content = document.getElementById('popup-content');
 var closer = document.getElementById('popup-closer');
+var sketch;
+
 closer.onclick = function() {
     container.style.display = 'none';
     closer.blur();
@@ -32,7 +34,7 @@ var map = new ol.Map({
 var layerSwitcher = new ol.control.LayerSwitcher({tipLabel: "Layers"});
 map.addControl(layerSwitcher);
 
-map.getView().fit([-9324705.969435, -208677.346914, -6814839.845000, 1239183.581874], map.getSize());
+map.getView().fit([-9394274.749151, -208678.754298, -6746087.810419, 1239192.141006], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
@@ -226,6 +228,9 @@ var onPointerMove = function(evt) {
 
 var onSingleClick = function(evt) {
     if (doHover) {
+        return;
+    }
+    if (sketch) {
         return;
     }
     var pixel = map.getEventPixel(evt.originalEvent);
