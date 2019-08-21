@@ -37,7 +37,7 @@ layerSwitcher.hidePanel = function() {};
 layerSwitcher.showPanel();
 
 
-map.getView().fit([-10169889.912394, -989070.003599, -5222149.964279, 1923222.343343], map.getSize());
+map.getView().fit([-10492860.104112, -1414354.182233, -5605069.259500, 1490493.246487], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
