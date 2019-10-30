@@ -32,11 +32,11 @@ jsonSource_PreciosporDepartamento_2.addFeatures(features_PreciosporDepartamento_
                 source:jsonSource_PreciosporDepartamento_2, 
                 style: style_PreciosporDepartamento_2,
     title: 'Precios por Departamento<br />\
-    <img src="styles/legend/PreciosporDepartamento_2_0.png" />  1451 - 1451 <br />\
-    <img src="styles/legend/PreciosporDepartamento_2_1.png" />  1451 - 1541 <br />\
-    <img src="styles/legend/PreciosporDepartamento_2_2.png" />  1541 - 1700 <br />\
-    <img src="styles/legend/PreciosporDepartamento_2_3.png" />  1700 - 2150 <br />\
-    <img src="styles/legend/PreciosporDepartamento_2_4.png" />  2150 - 2496 <br />'
+    <img src="styles/legend/PreciosporDepartamento_2_0.png" />  1422 - 1422 <br />\
+    <img src="styles/legend/PreciosporDepartamento_2_1.png" />  1422 - 1585 <br />\
+    <img src="styles/legend/PreciosporDepartamento_2_2.png" />  1585 - 1755 <br />\
+    <img src="styles/legend/PreciosporDepartamento_2_3.png" />  1755 - 1950 <br />\
+    <img src="styles/legend/PreciosporDepartamento_2_4.png" />  1950 - 2200 <br />'
         });var format_MunicipiosTomadePrecios_3 = new ol.format.GeoJSON();
 var features_MunicipiosTomadePrecios_3 = format_MunicipiosTomadePrecios_3.readFeatures(json_MunicipiosTomadePrecios_3, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
