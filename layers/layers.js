@@ -1,5 +1,6 @@
 var wms_layers = [];
 
+
         var lyr_OpenStreetMap_0 = new ol.layer.Tile({
             'title': 'OpenStreetMap',
             'type': 'base',
@@ -7,46 +8,55 @@ var wms_layers = [];
             
             
             source: new ol.source.XYZ({
-    attributions: '<a href=""></a>',
+    attributions: ' ',
                 url: 'http://a.tile.openstreetmap.org/{z}/{x}/{y}.png'
             })
-        });var format_LimiteDepartamental_1 = new ol.format.GeoJSON();
+        });
+var format_LimiteDepartamental_1 = new ol.format.GeoJSON();
 var features_LimiteDepartamental_1 = format_LimiteDepartamental_1.readFeatures(json_LimiteDepartamental_1, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
 var jsonSource_LimiteDepartamental_1 = new ol.source.Vector({
-    attributions: '<a href=""></a>',
+    attributions: ' ',
 });
-jsonSource_LimiteDepartamental_1.addFeatures(features_LimiteDepartamental_1);var lyr_LimiteDepartamental_1 = new ol.layer.Vector({
+jsonSource_LimiteDepartamental_1.addFeatures(features_LimiteDepartamental_1);
+var lyr_LimiteDepartamental_1 = new ol.layer.Vector({
                 declutter: true,
                 source:jsonSource_LimiteDepartamental_1, 
                 style: style_LimiteDepartamental_1,
+                interactive: true,
                 title: '<img src="styles/legend/LimiteDepartamental_1.png" /> Limite Departamental'
-            });var format_PreciosporDepartamento_2 = new ol.format.GeoJSON();
+            });
+var format_PreciosporDepartamento_2 = new ol.format.GeoJSON();
 var features_PreciosporDepartamento_2 = format_PreciosporDepartamento_2.readFeatures(json_PreciosporDepartamento_2, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
 var jsonSource_PreciosporDepartamento_2 = new ol.source.Vector({
-    attributions: '<a href=""></a>',
+    attributions: ' ',
 });
-jsonSource_PreciosporDepartamento_2.addFeatures(features_PreciosporDepartamento_2);var lyr_PreciosporDepartamento_2 = new ol.layer.Vector({
+jsonSource_PreciosporDepartamento_2.addFeatures(features_PreciosporDepartamento_2);
+var lyr_PreciosporDepartamento_2 = new ol.layer.Vector({
                 declutter: true,
                 source:jsonSource_PreciosporDepartamento_2, 
                 style: style_PreciosporDepartamento_2,
+                interactive: true,
     title: 'Precios por Departamento<br />\
-    <img src="styles/legend/PreciosporDepartamento_2_0.png" />  1422 - 1422 <br />\
-    <img src="styles/legend/PreciosporDepartamento_2_1.png" />  1422 - 1585 <br />\
-    <img src="styles/legend/PreciosporDepartamento_2_2.png" />  1585 - 1755 <br />\
-    <img src="styles/legend/PreciosporDepartamento_2_3.png" />  1755 - 1950 <br />\
-    <img src="styles/legend/PreciosporDepartamento_2_4.png" />  1950 - 2200 <br />'
-        });var format_MunicipiosTomadePrecios_3 = new ol.format.GeoJSON();
+    <img src="styles/legend/PreciosporDepartamento_2_0.png" />  1388 - 1403 <br />\
+    <img src="styles/legend/PreciosporDepartamento_2_1.png" />  1403 - 1616 <br />\
+    <img src="styles/legend/PreciosporDepartamento_2_2.png" />  1616 - 1755 <br />\
+    <img src="styles/legend/PreciosporDepartamento_2_3.png" />  1755 - 2068 <br />\
+    <img src="styles/legend/PreciosporDepartamento_2_4.png" />  2068 - 2182 <br />'
+        });
+var format_MunicipiosTomadePrecios_3 = new ol.format.GeoJSON();
 var features_MunicipiosTomadePrecios_3 = format_MunicipiosTomadePrecios_3.readFeatures(json_MunicipiosTomadePrecios_3, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
 var jsonSource_MunicipiosTomadePrecios_3 = new ol.source.Vector({
-    attributions: '<a href=""></a>',
+    attributions: ' ',
 });
-jsonSource_MunicipiosTomadePrecios_3.addFeatures(features_MunicipiosTomadePrecios_3);var lyr_MunicipiosTomadePrecios_3 = new ol.layer.Vector({
+jsonSource_MunicipiosTomadePrecios_3.addFeatures(features_MunicipiosTomadePrecios_3);
+var lyr_MunicipiosTomadePrecios_3 = new ol.layer.Vector({
                 declutter: true,
                 source:jsonSource_MunicipiosTomadePrecios_3, 
                 style: style_MunicipiosTomadePrecios_3,
+                interactive: true,
                 title: '<img src="styles/legend/MunicipiosTomadePrecios_3.png" /> Municipios Toma de Precios'
             });
 
