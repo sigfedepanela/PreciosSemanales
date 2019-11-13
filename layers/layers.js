@@ -39,11 +39,11 @@ var lyr_PreciosporDepartamento_2 = new ol.layer.Vector({
                 style: style_PreciosporDepartamento_2,
                 interactive: true,
     title: 'Precios por Departamento<br />\
-    <img src="styles/legend/PreciosporDepartamento_2_0.png" />  1388 - 1403 <br />\
-    <img src="styles/legend/PreciosporDepartamento_2_1.png" />  1403 - 1616 <br />\
-    <img src="styles/legend/PreciosporDepartamento_2_2.png" />  1616 - 1755 <br />\
-    <img src="styles/legend/PreciosporDepartamento_2_3.png" />  1755 - 2068 <br />\
-    <img src="styles/legend/PreciosporDepartamento_2_4.png" />  2068 - 2182 <br />'
+    <img src="styles/legend/PreciosporDepartamento_2_0.png" />  1452 - 1452 <br />\
+    <img src="styles/legend/PreciosporDepartamento_2_1.png" />  1452 - 1485 <br />\
+    <img src="styles/legend/PreciosporDepartamento_2_2.png" />  1485 - 1650 <br />\
+    <img src="styles/legend/PreciosporDepartamento_2_3.png" />  1650 - 1897 <br />\
+    <img src="styles/legend/PreciosporDepartamento_2_4.png" />  1897 - 2194 <br />'
         });
 var format_MunicipiosTomadePrecios_3 = new ol.format.GeoJSON();
 var features_MunicipiosTomadePrecios_3 = format_MunicipiosTomadePrecios_3.readFeatures(json_MunicipiosTomadePrecios_3, 
