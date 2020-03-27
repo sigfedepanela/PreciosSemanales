@@ -36,7 +36,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[-2.20672658427,-85.2367068686],[12.2093904437,-60.8299620632]]);
+        }).fitBounds([[-2.20379719985,-85.613687955],[11.9942613337,-56.987036278]]);
         var hash = new L.Hash(map);
         map.attributionControl.addAttribution('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a>');
         var bounds_group = new L.featureGroup([]);
@@ -116,7 +116,7 @@
         }
 
         function style_PreciosporDepartamento_1_0(feature) {
-            if (feature.properties['$ por Kg'] >= 1342.000000 && feature.properties['$ por Kg'] <= 1342.000000 ) {
+            if (feature.properties['$ por Kg'] >= 1841.000000 && feature.properties['$ por Kg'] <= 1900.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_1',
                 opacity: 1,
@@ -130,7 +130,7 @@
                 fillColor: 'rgba(215,25,28,1.0)',
             }
             }
-            if (feature.properties['$ por Kg'] >= 1342.000000 && feature.properties['$ por Kg'] <= 1691.000000 ) {
+            if (feature.properties['$ por Kg'] >= 1900.000000 && feature.properties['$ por Kg'] <= 2050.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_1',
                 opacity: 1,
@@ -144,7 +144,7 @@
                 fillColor: 'rgba(253,174,97,1.0)',
             }
             }
-            if (feature.properties['$ por Kg'] >= 1691.000000 && feature.properties['$ por Kg'] <= 1850.000000 ) {
+            if (feature.properties['$ por Kg'] >= 2050.000000 && feature.properties['$ por Kg'] <= 2187.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_1',
                 opacity: 1,
@@ -158,7 +158,7 @@
                 fillColor: 'rgba(255,255,191,1.0)',
             }
             }
-            if (feature.properties['$ por Kg'] >= 1850.000000 && feature.properties['$ por Kg'] <= 2084.000000 ) {
+            if (feature.properties['$ por Kg'] >= 2187.000000 && feature.properties['$ por Kg'] <= 2438.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_1',
                 opacity: 1,
@@ -172,7 +172,7 @@
                 fillColor: 'rgba(171,217,233,1.0)',
             }
             }
-            if (feature.properties['$ por Kg'] >= 2084.000000 && feature.properties['$ por Kg'] <= 2220.000000 ) {
+            if (feature.properties['$ por Kg'] >= 2438.000000 && feature.properties['$ por Kg'] <= 2641.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_1',
                 opacity: 1,
@@ -238,7 +238,7 @@
         bounds_group.addLayer(layer_MunicipiosTomadePrecios_2);
         map.addLayer(layer_MunicipiosTomadePrecios_2);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/MunicipiosTomadePrecios_2.png" /> Municipios Toma de Precios': layer_MunicipiosTomadePrecios_2,'Precios por Departamento<br /><table><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_1_134213420.png" /></td><td> 1342 - 1342 </td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_1_134216911.png" /></td><td> 1342 - 1691 </td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_1_169118502.png" /></td><td> 1691 - 1850 </td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_1_185020843.png" /></td><td> 1850 - 2084 </td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_1_208422204.png" /></td><td> 2084 - 2220 </td></tr></table>': layer_PreciosporDepartamento_1,'<img src="legend/LimiteDepartamental_0.png" /> Limite Departamental': layer_LimiteDepartamental_0,}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/MunicipiosTomadePrecios_2.png" /> Municipios Toma de Precios': layer_MunicipiosTomadePrecios_2,'Precios por Departamento<br /><table><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_1_184119000.png" /></td><td> 1841 - 1900 </td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_1_190020501.png" /></td><td> 1900 - 2050 </td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_1_205021872.png" /></td><td> 2050 - 2187 </td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_1_218724383.png" /></td><td> 2187 - 2438 </td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_1_243826414.png" /></td><td> 2438 - 2641 </td></tr></table>': layer_PreciosporDepartamento_1,'<img src="legend/LimiteDepartamental_0.png" /> Limite Departamental': layer_LimiteDepartamental_0,}).addTo(map);
         setBounds();
         </script>
     </body>
