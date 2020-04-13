@@ -116,7 +116,7 @@
         }
 
         function style_PreciosporDepartamento_1_0(feature) {
-            if (feature.properties['$ por Kg'] >= 2500.000000 && feature.properties['$ por Kg'] <= 2600.000000 ) {
+            if (feature.properties['$ por Kg'] >= 2550.000000 && feature.properties['$ por Kg'] <= 2600.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_1',
                 opacity: 1,
@@ -130,7 +130,7 @@
                 fillColor: 'rgba(215,25,28,1.0)',
             }
             }
-            if (feature.properties['$ por Kg'] >= 2600.000000 && feature.properties['$ por Kg'] <= 2746.000000 ) {
+            if (feature.properties['$ por Kg'] >= 2600.000000 && feature.properties['$ por Kg'] <= 2750.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_1',
                 opacity: 1,
@@ -144,7 +144,7 @@
                 fillColor: 'rgba(253,174,97,1.0)',
             }
             }
-            if (feature.properties['$ por Kg'] >= 2746.000000 && feature.properties['$ por Kg'] <= 2933.000000 ) {
+            if (feature.properties['$ por Kg'] >= 2750.000000 && feature.properties['$ por Kg'] <= 2950.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_1',
                 opacity: 1,
@@ -158,7 +158,7 @@
                 fillColor: 'rgba(255,255,191,1.0)',
             }
             }
-            if (feature.properties['$ por Kg'] >= 2933.000000 && feature.properties['$ por Kg'] <= 3150.000000 ) {
+            if (feature.properties['$ por Kg'] >= 2950.000000 && feature.properties['$ por Kg'] <= 3111.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_1',
                 opacity: 1,
@@ -172,7 +172,7 @@
                 fillColor: 'rgba(171,217,233,1.0)',
             }
             }
-            if (feature.properties['$ por Kg'] >= 3150.000000 && feature.properties['$ por Kg'] <= 3300.000000 ) {
+            if (feature.properties['$ por Kg'] >= 3111.000000 && feature.properties['$ por Kg'] <= 3730.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_1',
                 opacity: 1,
@@ -238,7 +238,7 @@
         bounds_group.addLayer(layer_MunicipiosTomadePrecios_2);
         map.addLayer(layer_MunicipiosTomadePrecios_2);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/MunicipiosTomadePrecios_2.png" /> Municipios Toma de Precios': layer_MunicipiosTomadePrecios_2,'Precios por Departamento<br /><table><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_1_250026000.png" /></td><td> 2500 - 2600 </td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_1_260027461.png" /></td><td> 2600 - 2746 </td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_1_274629332.png" /></td><td> 2746 - 2933 </td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_1_293331503.png" /></td><td> 2933 - 3150 </td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_1_315033004.png" /></td><td> 3150 - 3300 </td></tr></table>': layer_PreciosporDepartamento_1,'<img src="legend/LimiteDepartamental_0.png" /> Limite Departamental': layer_LimiteDepartamental_0,}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/MunicipiosTomadePrecios_2.png" /> Municipios Toma de Precios': layer_MunicipiosTomadePrecios_2,'Precios por Departamento<br /><table><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_1_255026000.png" /></td><td> 2550 - 2600 </td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_1_260027501.png" /></td><td> 2600 - 2750 </td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_1_275029502.png" /></td><td> 2750 - 2950 </td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_1_295031113.png" /></td><td> 2950 - 3111 </td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_1_311137304.png" /></td><td> 3111 - 3730 </td></tr></table>': layer_PreciosporDepartamento_1,'<img src="legend/LimiteDepartamental_0.png" /> Limite Departamental': layer_LimiteDepartamental_0,}).addTo(map);
         setBounds();
         </script>
     </body>
