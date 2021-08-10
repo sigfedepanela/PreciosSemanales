@@ -129,7 +129,7 @@
         }
 
         function style_PreciosporDepartamento_2_0(feature) {
-            if (feature.properties['$ por Kg'] >= 2990.000000 && feature.properties['$ por Kg'] <= 3030.000000 ) {
+            if (feature.properties['$ por Kg'] >= 2857.000000 && feature.properties['$ por Kg'] <= 2857.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
@@ -144,7 +144,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['$ por Kg'] >= 3030.000000 && feature.properties['$ por Kg'] <= 3224.000000 ) {
+            if (feature.properties['$ por Kg'] >= 2857.000000 && feature.properties['$ por Kg'] <= 3100.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
@@ -159,7 +159,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['$ por Kg'] >= 3224.000000 && feature.properties['$ por Kg'] <= 3383.000000 ) {
+            if (feature.properties['$ por Kg'] >= 3100.000000 && feature.properties['$ por Kg'] <= 3200.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
@@ -174,7 +174,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['$ por Kg'] >= 3383.000000 && feature.properties['$ por Kg'] <= 3550.000000 ) {
+            if (feature.properties['$ por Kg'] >= 3200.000000 && feature.properties['$ por Kg'] <= 3490.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
@@ -248,7 +248,7 @@
         bounds_group.addLayer(layer_MunicipiosTomadePrecios_3);
         map.addLayer(layer_MunicipiosTomadePrecios_3);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/MunicipiosTomadePrecios_3.png" /> Municipios Toma de Precios': layer_MunicipiosTomadePrecios_3,'Precios por Departamento<br /><table><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_299030300.png" /></td><td>2990 - 3030</td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_303032241.png" /></td><td>3030 - 3224</td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_322433832.png" /></td><td>3224 - 3383</td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_338335503.png" /></td><td>3383 - 3550</td></tr></table>': layer_PreciosporDepartamento_2,'<img src="legend/LimiteDepartamental_1.png" /> Limite Departamental': layer_LimiteDepartamental_1,"OSM Standard": layer_OSMStandard_0,}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/MunicipiosTomadePrecios_3.png" /> Municipios Toma de Precios': layer_MunicipiosTomadePrecios_3,'Precios por Departamento<br /><table><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_285728570.png" /></td><td>2857 - 2857</td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_285731001.png" /></td><td>2857 - 3100</td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_310032002.png" /></td><td>3100 - 3200</td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_320034903.png" /></td><td>3200 - 3490</td></tr></table>': layer_PreciosporDepartamento_2,'<img src="legend/LimiteDepartamental_1.png" /> Limite Departamental': layer_LimiteDepartamental_1,"OSM Standard": layer_OSMStandard_0,}).addTo(map);
         setBounds();
         </script>
     </body>
