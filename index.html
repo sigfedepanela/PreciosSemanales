@@ -36,7 +36,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[-3.661213615568881,-85.56283941065996],[11.903272487984111,-55.62658571122767]]);
+        }).fitBounds([[-3.6612506401025193,-85.9962175307673],[11.903394394649213,-55.20791432242939]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -97,39 +97,32 @@
         function pop_PreciosporDepartamento_2(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Departamen</th>\
-                        <td>' + (feature.properties['Departamen'] !== null ? autolinker.link(feature.properties['Departamen'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Departamen'] !== null ? autolinker.link(feature.properties['Departamen'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Año</th>\
-                        <td>' + (feature.properties['Año'] !== null ? autolinker.link(feature.properties['Año'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Año'] !== null ? autolinker.link(feature.properties['Año'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">MES</th>\
-                        <td>' + (feature.properties['MES'] !== null ? autolinker.link(feature.properties['MES'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['MES'] !== null ? autolinker.link(feature.properties['MES'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">SEMANA</th>\
-                        <td>' + (feature.properties['SEMANA'] !== null ? autolinker.link(feature.properties['SEMANA'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['SEMANA'] !== null ? autolinker.link(feature.properties['SEMANA'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">$ por Kg</th>\
-                        <td>' + (feature.properties['$ por Kg'] !== null ? autolinker.link(feature.properties['$ por Kg'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['$ por Kg'] !== null ? autolinker.link(feature.properties['$ por Kg'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">$ Prom Año</th>\
-                        <td>' + (feature.properties['$ Prom Año'] !== null ? autolinker.link(feature.properties['$ Prom Año'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['$ Prom Año'] !== null ? autolinker.link(feature.properties['$ Prom Año'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Prom_ Pais</th>\
-                        <td>' + (feature.properties['Prom_ Pais'] !== null ? autolinker.link(feature.properties['Prom_ Pais'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Prom_ Pais'] !== null ? autolinker.link(feature.properties['Prom_ Pais'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
         function style_PreciosporDepartamento_2_0(feature) {
-            if (feature.properties['$ por Kg'] >= 2778.000000 && feature.properties['$ por Kg'] <= 2778.000000 ) {
+            if (feature.properties['$ por Kg'] >= 3007.000000 && feature.properties['$ por Kg'] <= 3100.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
@@ -144,7 +137,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['$ por Kg'] >= 2778.000000 && feature.properties['$ por Kg'] <= 3167.000000 ) {
+            if (feature.properties['$ por Kg'] >= 3100.000000 && feature.properties['$ por Kg'] <= 3234.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
@@ -155,11 +148,11 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(166,187,217,1.0)',
+                fillColor: 'rgba(166,187,218,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['$ por Kg'] >= 3167.000000 && feature.properties['$ por Kg'] <= 3322.000000 ) {
+            if (feature.properties['$ por Kg'] >= 3234.000000 && feature.properties['$ por Kg'] <= 3317.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
@@ -170,11 +163,11 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(137,107,177,1.0)',
+                fillColor: 'rgba(137,107,178,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['$ por Kg'] >= 3322.000000 && feature.properties['$ por Kg'] <= 3405.000000 ) {
+            if (feature.properties['$ por Kg'] >= 3317.000000 && feature.properties['$ por Kg'] <= 3506.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
@@ -207,12 +200,10 @@
         function pop_MunicipiosTomadePrecios_3(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">DEPT</th>\
-                        <td>' + (feature.properties['DEPT'] !== null ? autolinker.link(feature.properties['DEPT'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['DEPT'] !== null ? autolinker.link(feature.properties['DEPT'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">MUNICIPIO</th>\
-                        <td>' + (feature.properties['MUNICIPIO'] !== null ? autolinker.link(feature.properties['MUNICIPIO'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['MUNICIPIO'] !== null ? autolinker.link(feature.properties['MUNICIPIO'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -246,9 +237,8 @@
             style: style_MunicipiosTomadePrecios_3_0,
         });
         bounds_group.addLayer(layer_MunicipiosTomadePrecios_3);
-        map.addLayer(layer_MunicipiosTomadePrecios_3);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/MunicipiosTomadePrecios_3.png" /> Municipios Toma de Precios': layer_MunicipiosTomadePrecios_3,'Precios por Departamento<br /><table><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_277827780.png" /></td><td>2778 - 2778</td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_277831671.png" /></td><td>2778 - 3167</td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_316733222.png" /></td><td>3167 - 3322</td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_332234053.png" /></td><td>3322 - 3405</td></tr></table>': layer_PreciosporDepartamento_2,'<img src="legend/LimiteDepartamental_1.png" /> Limite Departamental': layer_LimiteDepartamental_1,"OSM Standard": layer_OSMStandard_0,}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/MunicipiosTomadePrecios_3.png" /> Municipios Toma de Precios': layer_MunicipiosTomadePrecios_3,'Precios por Departamento<br /><table><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_300731000.png" /></td><td>3007 - 3100</td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_310032341.png" /></td><td>3100 - 3234</td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_323433172.png" /></td><td>3234 - 3317</td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_331735063.png" /></td><td>3317 - 3506</td></tr></table>': layer_PreciosporDepartamento_2,'<img src="legend/LimiteDepartamental_1.png" /> Limite Departamental': layer_LimiteDepartamental_1,"OSM Standard": layer_OSMStandard_0,}).addTo(map);
         setBounds();
         </script>
     </body>
