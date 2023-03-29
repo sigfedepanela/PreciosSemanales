@@ -39,7 +39,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[-4.763860045026705,-86.74985855194501],[14.483554868471975,-62.66678312156128]]);
+        }).fitBounds([[-5.673257298330979,-85.46987313411736],[13.574606889887926,-61.478582413976746]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -128,23 +128,23 @@
                         <td>' + (feature.properties['SEMANA'] !== null ? autolinker.link(feature.properties['SEMANA'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">4_$ por Kg</th>\
-                        <td>' + (feature.properties['4_$ por Kg'] !== null ? autolinker.link(feature.properties['4_$ por Kg'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">$ por Kg</th>\
+                        <td>' + (feature.properties['$ por Kg'] !== null ? autolinker.link(feature.properties['$ por Kg'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">4_Prom_ País</th>\
-                        <td>' + (feature.properties['4_Prom_ País'] !== null ? autolinker.link(feature.properties['4_Prom_ País'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Prom_ País</th>\
+                        <td>' + (feature.properties['Prom_ País'] !== null ? autolinker.link(feature.properties['Prom_ País'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">4_$ Prom Año</th>\
-                        <td>' + (feature.properties['4_$ Prom Año'] !== null ? autolinker.link(feature.properties['4_$ Prom Año'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">$ Prom Año</th>\
+                        <td>' + (feature.properties['$ Prom Año'] !== null ? autolinker.link(feature.properties['$ Prom Año'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
         function style_PreciosporDepartamento_2_0(feature) {
-            if (feature.properties['4_$ por Kg'] >= 2550.000000 && feature.properties['4_$ por Kg'] <= 2600.000000 ) {
+            if (feature.properties['$ por Kg'] >= 2550.000000 && feature.properties['$ por Kg'] <= 2600.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
@@ -159,7 +159,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['4_$ por Kg'] >= 2600.000000 && feature.properties['4_$ por Kg'] <= 2833.333333 ) {
+            if (feature.properties['$ por Kg'] >= 2600.000000 && feature.properties['$ por Kg'] <= 2833.333333 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
@@ -174,7 +174,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['4_$ por Kg'] >= 2833.333333 && feature.properties['4_$ por Kg'] <= 3362.000000 ) {
+            if (feature.properties['$ por Kg'] >= 2833.333333 && feature.properties['$ por Kg'] <= 3362.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
@@ -189,7 +189,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['4_$ por Kg'] >= 3362.000000 && feature.properties['4_$ por Kg'] <= 3934.427143 ) {
+            if (feature.properties['$ por Kg'] >= 3362.000000 && feature.properties['$ por Kg'] <= 3934.427143 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
