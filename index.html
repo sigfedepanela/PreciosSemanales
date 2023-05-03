@@ -37,9 +37,24 @@
         <script src="data/LimiteDepartamental_1.js"></script>
         <script src="data/PreciosporDepartamento_2.js"></script>
         <script>
+        var highlightLayer;
+        function highlightFeature(e) {
+            highlightLayer = e.target;
+
+            if (e.target.feature.geometry.type === 'LineString') {
+              highlightLayer.setStyle({
+                color: '#ffffff',
+              });
+            } else {
+              highlightLayer.setStyle({
+                fillColor: '#ffffff',
+                fillOpacity: 1
+              });
+            }
+        }
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[-6.78499582720507,-86.98359134810924],[12.38474939567263,-62.10637523689297]]);
+        }).fitBounds([[-6.3536747034781405,-85.01907187120672],[12.815732025711887,-61.19792121969198]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -72,6 +87,14 @@
         layer_OSMStandard_0;
         map.addLayer(layer_OSMStandard_0);
         function pop_LimiteDepartamental_1(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['DEPT'] !== null ? autolinker.link(feature.properties['DEPT'].toLocaleString()) : '') + '</td>\
@@ -92,7 +115,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(186,221,105,0.64)',
-                interactive: false,
+                interactive: true,
             }
         }
         map.createPane('pane_LimiteDepartamental_1');
@@ -100,7 +123,7 @@
         map.getPane('pane_LimiteDepartamental_1').style['mix-blend-mode'] = 'normal';
         var layer_LimiteDepartamental_1 = new L.geoJson(json_LimiteDepartamental_1, {
             attribution: '',
-            interactive: false,
+            interactive: true,
             dataVar: 'json_LimiteDepartamental_1',
             layerName: 'layer_LimiteDepartamental_1',
             pane: 'pane_LimiteDepartamental_1',
@@ -110,6 +133,14 @@
         bounds_group.addLayer(layer_LimiteDepartamental_1);
         map.addLayer(layer_LimiteDepartamental_1);
         function pop_PreciosporDepartamento_2(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">Departamen</th>\
@@ -144,7 +175,7 @@
         }
 
         function style_PreciosporDepartamento_2_0(feature) {
-            if (feature.properties['$ por Kg'] >= 2550.000000 && feature.properties['$ por Kg'] <= 2674.000000 ) {
+            if (feature.properties['$ por Kg'] >= 2500.000000 && feature.properties['$ por Kg'] <= 2679.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
@@ -159,7 +190,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['$ por Kg'] >= 2674.000000 && feature.properties['$ por Kg'] <= 2967.000000 ) {
+            if (feature.properties['$ por Kg'] >= 2679.000000 && feature.properties['$ por Kg'] <= 2950.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
@@ -174,7 +205,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['$ por Kg'] >= 2967.000000 && feature.properties['$ por Kg'] <= 3270.000000 ) {
+            if (feature.properties['$ por Kg'] >= 2950.000000 && feature.properties['$ por Kg'] <= 3270.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
@@ -189,7 +220,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['$ por Kg'] >= 3270.000000 && feature.properties['$ por Kg'] <= 3893.000000 ) {
+            if (feature.properties['$ por Kg'] >= 3270.000000 && feature.properties['$ por Kg'] <= 3914.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
@@ -220,7 +251,7 @@
         bounds_group.addLayer(layer_PreciosporDepartamento_2);
         map.addLayer(layer_PreciosporDepartamento_2);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'Precios por Departamento<br /><table><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_255026740.png" /></td><td>2550 - 2674</td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_267429671.png" /></td><td>2674 - 2967</td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_296732702.png" /></td><td>2967 - 3270</td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_327038933.png" /></td><td>3270 - 3893</td></tr></table>': layer_PreciosporDepartamento_2,'<img src="legend/LimiteDepartamental_1.png" /> Limite Departamental': layer_LimiteDepartamental_1,"OSM Standard": layer_OSMStandard_0,}).addTo(map);
+        L.control.layers(baseMaps,{'Precios por Departamento<br /><table><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_250026790.png" /></td><td>2500 - 2679</td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_267929501.png" /></td><td>2679 - 2950</td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_295032702.png" /></td><td>2950 - 3270</td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_327039143.png" /></td><td>3270 - 3914</td></tr></table>': layer_PreciosporDepartamento_2,'<img src="legend/LimiteDepartamental_1.png" /> Limite Departamental': layer_LimiteDepartamental_1,"OSM Standard": layer_OSMStandard_0,}).addTo(map);
         setBounds();
         map.addControl(new L.Control.Search({
             layer: layer_PreciosporDepartamento_2,
