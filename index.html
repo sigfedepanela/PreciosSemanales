@@ -54,7 +54,7 @@
         }
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[-5.7518906093808555,-88.69661156261007],[15.24460207792067,-60.298911433857896]]);
+        }).fitBounds([[-5.563027457377961,-88.19177434855737],[15.433722601019626,-59.768789606240205]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -176,7 +176,7 @@
         }
 
         function style_PreciosporDepartamento_2_0(feature) {
-            if (feature.properties['$ por Kg'] >= 2825.000000 && feature.properties['$ por Kg'] <= 2900.000000 ) {
+            if (feature.properties['$ por Kg'] >= 2925.000000 && feature.properties['$ por Kg'] <= 2967.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
@@ -191,7 +191,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['$ por Kg'] >= 2900.000000 && feature.properties['$ por Kg'] <= 3217.000000 ) {
+            if (feature.properties['$ por Kg'] >= 2967.000000 && feature.properties['$ por Kg'] <= 3322.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
@@ -206,7 +206,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['$ por Kg'] >= 3217.000000 && feature.properties['$ por Kg'] <= 3638.000000 ) {
+            if (feature.properties['$ por Kg'] >= 3322.000000 && feature.properties['$ por Kg'] <= 3616.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
@@ -221,7 +221,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['$ por Kg'] >= 3638.000000 && feature.properties['$ por Kg'] <= 4125.000000 ) {
+            if (feature.properties['$ por Kg'] >= 3616.000000 && feature.properties['$ por Kg'] <= 4181.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
@@ -252,7 +252,7 @@
         bounds_group.addLayer(layer_PreciosporDepartamento_2);
         map.addLayer(layer_PreciosporDepartamento_2);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'Precios por Departamento<br /><table><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_282529000.png" /></td><td>2825 - 2900</td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_290032171.png" /></td><td>2900 - 3217</td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_321736382.png" /></td><td>3217 - 3638</td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_363841253.png" /></td><td>3638 - 4125</td></tr></table>': layer_PreciosporDepartamento_2,'<img src="legend/LimiteDepartamental_1.png" /> Limite Departamental': layer_LimiteDepartamental_1,"OSM Standard": layer_OSMStandard_0,},{collapsed:false}).addTo(map);
+        L.control.layers(baseMaps,{'Precios por Departamento<br /><table><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_292529670.png" /></td><td>2925 - 2967</td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_296733221.png" /></td><td>2967 - 3322</td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_332236162.png" /></td><td>3322 - 3616</td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_361641813.png" /></td><td>3616 - 4181</td></tr></table>': layer_PreciosporDepartamento_2,'<img src="legend/LimiteDepartamental_1.png" /> Limite Departamental': layer_LimiteDepartamental_1,"OSM Standard": layer_OSMStandard_0,},{collapsed:false}).addTo(map);
         setBounds();
         map.addControl(new L.Control.Search({
             layer: layer_PreciosporDepartamento_2,
