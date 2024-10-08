@@ -59,7 +59,7 @@
         }
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[-3.5762782366244563,-90.34443684605128],[15.59188618757566,-60.019710862345576]]);
+        }).fitBounds([[-3.5762776371961618,-90.52238853354943],[15.591883513632235,-59.839739452730385]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -222,7 +222,7 @@
         }
 
         function style_PreciosporDepartamento_2_0(feature) {
-            if (feature.properties['$ por Kg'] >= 3292.000000 && feature.properties['$ por Kg'] <= 3450.000000 ) {
+            if (feature.properties['$ por Kg'] >= 3367.000000 && feature.properties['$ por Kg'] <= 3408.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
@@ -237,7 +237,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['$ por Kg'] >= 3450.000000 && feature.properties['$ por Kg'] <= 3710.000000 ) {
+            if (feature.properties['$ por Kg'] >= 3408.000000 && feature.properties['$ por Kg'] <= 3810.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
@@ -252,7 +252,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['$ por Kg'] >= 3710.000000 && feature.properties['$ por Kg'] <= 4205.000000 ) {
+            if (feature.properties['$ por Kg'] >= 3810.000000 && feature.properties['$ por Kg'] <= 4212.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
@@ -267,7 +267,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['$ por Kg'] >= 4205.000000 && feature.properties['$ por Kg'] <= 4670.000000 ) {
+            if (feature.properties['$ por Kg'] >= 4212.000000 && feature.properties['$ por Kg'] <= 4583.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
