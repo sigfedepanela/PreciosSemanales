@@ -12,6 +12,8 @@
         <link rel="stylesheet" href="css/qgis2web.css">
         <link rel="stylesheet" href="css/fontawesome-all.min.css">
         <link rel="stylesheet" href="css/leaflet-search.css">
+        <link rel="stylesheet" href="css/filter.css">
+<link rel="stylesheet" href="css/nouislider.min.css">
         <link rel="stylesheet" href="css/leaflet-measure.css">
         <style>
         html, body, #map {
@@ -39,6 +41,9 @@
         <script src="js/labels.js"></script>
         <script src="js/leaflet-measure.js"></script>
         <script src="js/leaflet-search.js"></script>
+        <script src="js/tailDT.js"></script>
+<script src="js/nouislider.min.js"></script>
+<script src="js/wNumb.js"></script>
         <script src="data/LimiteDepartamental_1.js"></script>
         <script src="data/PreciosporDepartamento_2.js"></script>
         <script>
@@ -59,7 +64,7 @@
         }
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[-3.57627875564992,-89.04920918637468],[15.591888502856323,-61.328945464544354]]);
+        }).fitBounds([[-3.5762083947594645,-89.75110795907446],[15.591574635602734,-60.619607803368346]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -237,7 +242,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['$ por Kg'] >= 3550.000000 && feature.properties['$ por Kg'] <= 3977.000000 ) {
+            if (feature.properties['$ por Kg'] >= 3550.000000 && feature.properties['$ por Kg'] <= 4156.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
@@ -252,7 +257,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['$ por Kg'] >= 3977.000000 && feature.properties['$ por Kg'] <= 4348.000000 ) {
+            if (feature.properties['$ por Kg'] >= 4156.000000 && feature.properties['$ por Kg'] <= 4580.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
@@ -267,7 +272,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['$ por Kg'] >= 4348.000000 && feature.properties['$ por Kg'] <= 4850.000000 ) {
+            if (feature.properties['$ por Kg'] >= 4580.000000 && feature.properties['$ por Kg'] <= 5000.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
@@ -305,6 +310,155 @@
             propertyName: 'Departamen'}));
         document.getElementsByClassName('search-button')[0].className +=
          ' fa fa-binoculars';
+        var mapDiv = document.getElementById('map');
+        var row = document.createElement('div');
+        row.className="row";
+        row.id="all";
+        row.style.height = "100%";
+        var col1 = document.createElement('div');
+        col1.className="col9";
+        col1.id = "mapWindow";
+        col1.style.height = "99%";
+        col1.style.width = "80%";
+        col1.style.display = "inline-block";
+        var col2 = document.createElement('div');
+        col2.className="col3";
+        col2.id = "menu";
+        col2.style.display = "inline-block";
+        mapDiv.parentNode.insertBefore(row, mapDiv);
+        document.getElementById("all").appendChild(col1);
+        document.getElementById("all").appendChild(col2);
+        col1.appendChild(mapDiv)
+        var Filters = {"$ Prom Año": "int"};
+        function filterFunc() {
+          map.eachLayer(function(lyr){
+          if ("options" in lyr && "dataVar" in lyr["options"]){
+            features = this[lyr["options"]["dataVar"]].features.slice(0);
+            try{
+              for (key in Filters){
+                keyS = key.replace(/[^a-zA-Z0-9_]/g, "")
+                if (Filters[key] == "str" || Filters[key] == "bool"){
+                  var selection = [];
+                  var options = document.getElementById("sel_" + keyS).options
+                  for (var i=0; i < options.length; i++) {
+                    if (options[i].selected) selection.push(options[i].value);
+                  }
+                    try{
+                      if (key in features[0].properties){
+                        for (i = features.length - 1;
+                          i >= 0; --i){
+                          if (selection.indexOf(
+                          features[i].properties[key])<0
+                          && selection.length>0) {
+                          features.splice(i,1);
+                          }
+                        }
+                      }
+                    } catch(err){
+                  }
+                }
+                if (Filters[key] == "int"){
+                  sliderVals =  document.getElementById(
+                    "div_" + keyS).noUiSlider.get();
+                  try{
+                    if (key in features[0].properties){
+                    for (i = features.length - 1; i >= 0; --i){
+                      if (parseInt(features[i].properties[key])
+                          < sliderVals[0]
+                          || parseInt(features[i].properties[key])
+                          > sliderVals[1]){
+                            features.splice(i,1);
+                          }
+                        }
+                      }
+                    } catch(err){
+                    }
+                  }
+                if (Filters[key] == "real"){
+                  sliderVals =  document.getElementById(
+                    "div_" + keyS).noUiSlider.get();
+                  try{
+                    if (key in features[0].properties){
+                    for (i = features.length - 1; i >= 0; --i){
+                      if (features[i].properties[key]
+                          < sliderVals[0]
+                          || features[i].properties[key]
+                          > sliderVals[1]){
+                            features.splice(i,1);
+                          }
+                        }
+                      }
+                    } catch(err){
+                    }
+                  }
+                if (Filters[key] == "date"
+                  || Filters[key] == "datetime"
+                  || Filters[key] == "time"){
+                  try{
+                    if (key in features[0].properties){
+                      HTMLkey = key.replace(/[&\/\\#,+()$~%.'":*?<>{} ]/g, '');
+                      startdate = document.getElementById("dat_" +
+                        HTMLkey + "_date1").value.replace(" ", "T");
+                      enddate = document.getElementById("dat_" +
+                        HTMLkey + "_date2").value.replace(" ", "T");
+                      for (i = features.length - 1; i >= 0; --i){
+                        if (features[i].properties[key] < startdate
+                          || features[i].properties[key] > enddate){
+                          features.splice(i,1);
+                        }
+                      }
+                    }
+                  } catch(err){
+                  }
+                }
+              }
+            } catch(err){
+            }
+          this[lyr["options"]["layerName"]].clearLayers();
+          this[lyr["options"]["layerName"]].addData(features);
+          }
+          })
+        }
+            document.getElementById("menu").appendChild(
+                document.createElement("div"));
+            var div_PromAo = document.createElement("div");
+            div_PromAo.id = "div_PromAo";
+            div_PromAo.className = "slider";
+            document.getElementById("menu").appendChild(div_PromAo);
+            var lab_PromAo = document.createElement('div');
+            lab_PromAo.innerHTML  = '$ Prom Año: <span id="val_PromAo"></span>';
+            lab_PromAo.className = 'filterlabel';
+            document.getElementById("menu").appendChild(lab_PromAo);
+            var reset_PromAo = document.createElement('div');
+            reset_PromAo.innerHTML = 'clear filter';
+            reset_PromAo.className = 'filterlabel';
+            lab_PromAo.className = 'filterlabel';
+            reset_PromAo.onclick = function() {
+                sel_PromAo.noUiSlider.reset();
+            };
+            document.getElementById("menu").appendChild(reset_PromAo);
+            var sel_PromAo = document.getElementById('div_PromAo');
+            noUiSlider.create(sel_PromAo, {
+                connect: true,
+                start: [3152, 4181],
+                step: 1,
+                format: wNumb({
+                    decimals: 0,
+                    }),
+                range: {
+                min: 3152,
+                max: 4181
+                }
+            });
+            sel_PromAo.noUiSlider.on('update', function (values) {
+            filterVals =[];
+            for (value in values){
+            filterVals.push(parseInt(value))
+            }
+            val_PromAo = document.getElementById('val_PromAo');
+            val_PromAo.innerHTML = values.join(' - ');
+                filterFunc()
+            });
         </script>
     </body>
 </html>
