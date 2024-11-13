@@ -11,7 +11,6 @@
         <link rel="stylesheet" href="css/L.Control.Locate.min.css">
         <link rel="stylesheet" href="css/qgis2web.css">
         <link rel="stylesheet" href="css/fontawesome-all.min.css">
-        <link rel="stylesheet" href="css/leaflet-search.css">
         <link rel="stylesheet" href="css/leaflet-measure.css">
         <style>
         html, body, #map {
@@ -38,7 +37,6 @@
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
         <script src="js/leaflet-measure.js"></script>
-        <script src="js/leaflet-search.js"></script>
         <script src="data/LimiteDepartamental_1.js"></script>
         <script src="data/PreciosporDepartamento_2.js"></script>
         <script>
@@ -222,7 +220,7 @@
         }
 
         function style_PreciosporDepartamento_2_0(feature) {
-            if (feature.properties['$ por Kg'] >= 3675.000000 && feature.properties['$ por Kg'] <= 3867.000000 ) {
+            if (feature.properties['$ por Kg'] >= 3692.000000 && feature.properties['$ por Kg'] <= 3692.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
@@ -237,7 +235,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['$ por Kg'] >= 3867.000000 && feature.properties['$ por Kg'] <= 4341.000000 ) {
+            if (feature.properties['$ por Kg'] >= 3692.000000 && feature.properties['$ por Kg'] <= 4348.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
@@ -252,7 +250,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['$ por Kg'] >= 4341.000000 && feature.properties['$ por Kg'] <= 4762.000000 ) {
+            if (feature.properties['$ por Kg'] >= 4348.000000 && feature.properties['$ por Kg'] <= 4854.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
@@ -267,7 +265,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['$ por Kg'] >= 4762.000000 && feature.properties['$ por Kg'] <= 5260.000000 ) {
+            if (feature.properties['$ por Kg'] >= 4854.000000 && feature.properties['$ por Kg'] <= 5500.000000 ) {
                 return {
                 pane: 'pane_PreciosporDepartamento_2',
                 opacity: 1,
@@ -297,14 +295,21 @@
         });
         bounds_group.addLayer(layer_PreciosporDepartamento_2);
         map.addLayer(layer_PreciosporDepartamento_2);
+        var overlaysTree = [
+            {label: 'Precios por Departamento<br /><table><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_369236920.png" /></td><td>3692 - 3692</td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_369243481.png" /></td><td>3692 - 4348</td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_434848542.png" /></td><td>4348 - 4854</td></tr><tr><td style="text-align: center;"><img src="legend/PreciosporDepartamento_2_485455003.png" /></td><td>4854 - 5500</td></tr></table>', layer: layer_PreciosporDepartamento_2},
+            {label: '<img src="legend/LimiteDepartamental_1.png" /> Limite Departamental', layer: layer_LimiteDepartamental_1},
+            {label: "OSM Standard", layer: layer_OSMStandard_0},]
+        var lay = L.control.layers.tree(null, overlaysTree,{
+            //namedToggle: true,
+            //selectorBack: false,
+            //closedSymbol: '&#8862; &#x1f5c0;',
+            //openedSymbol: '&#8863; &#x1f5c1;',
+            //collapseAll: 'Collapse all',
+            //expandAll: 'Expand all',
+            collapsed: true,
+        });
+        lay.addTo(map);
         setBounds();
-        map.addControl(new L.Control.Search({
-            layer: layer_PreciosporDepartamento_2,
-            initial: false,
-            hideMarkerOnCollapse: true,
-            propertyName: 'Departamen'}));
-        document.getElementsByClassName('search-button')[0].className +=
-         ' fa fa-binoculars';
         </script>
     </body>
 </html>
