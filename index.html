@@ -57,7 +57,7 @@
         }
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[-4.718688346523396,-86.62637565809322],[14.450118437343775,-56.56937609374627]]);
+        }).fitBounds([[-5.0015587098005305,-87.02359657560083],[14.167363217225432,-56.99311033002393]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -132,7 +132,7 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['DEPT'] !== null ? autolinker.link(String(feature.properties['DEPT']).replace(/'/g, '\'').replace(/"/g, '&quot;').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['DEPT'] !== null ? autolinker.link(String(feature.properties['DEPT']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -185,31 +185,31 @@
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">Departamento</th>\
-                        <td class="visible-with-data" id="Departamento">' + (feature.properties['Departamento'] !== null ? autolinker.link(String(feature.properties['Departamento']).replace(/'/g, '\'').replace(/"/g, '&quot;').toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="Departamento">' + (feature.properties['Departamento'] !== null ? autolinker.link(String(feature.properties['Departamento']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Año</th>\
-                        <td class="visible-with-data" id="Año">' + (feature.properties['Año'] !== null ? autolinker.link(String(feature.properties['Año']).replace(/'/g, '\'').replace(/"/g, '&quot;').toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="Año">' + (feature.properties['Año'] !== null ? autolinker.link(String(feature.properties['Año']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Mes</th>\
-                        <td class="visible-with-data" id="Mes">' + (feature.properties['Mes'] !== null ? autolinker.link(String(feature.properties['Mes']).replace(/'/g, '\'').replace(/"/g, '&quot;').toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="Mes">' + (feature.properties['Mes'] !== null ? autolinker.link(String(feature.properties['Mes']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Semana</th>\
-                        <td class="visible-with-data" id="Semana">' + (feature.properties['Semana'] !== null ? autolinker.link(String(feature.properties['Semana']).replace(/'/g, '\'').replace(/"/g, '&quot;').toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="Semana">' + (feature.properties['Semana'] !== null ? autolinker.link(String(feature.properties['Semana']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Precio ($) por Kg</th>\
-                        <td class="visible-with-data" id="Precio ($) por Kg">' + (feature.properties['Precio ($) por Kg'] !== null ? autolinker.link(String(feature.properties['Precio ($) por Kg']).replace(/'/g, '\'').replace(/"/g, '&quot;').toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="Precio ($) por Kg">' + (feature.properties['Precio ($) por Kg'] !== null ? autolinker.link(String(feature.properties['Precio ($) por Kg']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Precio ($) por Kg - Promedio Año Departamento</th>\
-                        <td class="visible-with-data" id="Precio ($) por Kg - Promedio Año Departamento">' + (feature.properties['Precio ($) por Kg - Promedio Año Departamento'] !== null ? autolinker.link(String(feature.properties['Precio ($) por Kg - Promedio Año Departamento']).replace(/'/g, '\'').replace(/"/g, '&quot;').toLocaleString()) : '') + '</td>\
+                        <th scope="row">Precio ($) por Kg - Promedio Año Departamento </th>\
+                        <td class="visible-with-data" id="Precio ($) por Kg - Promedio Año Departamento ">' + (feature.properties['Precio ($) por Kg - Promedio Año Departamento '] !== null ? autolinker.link(String(feature.properties['Precio ($) por Kg - Promedio Año Departamento ']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Precio ($) por Kg - Promedio Año País</th>\
-                        <td class="visible-with-data" id="Precio ($) por Kg - Promedio Año País">' + (feature.properties['Precio ($) por Kg - Promedio Año País'] !== null ? autolinker.link(String(feature.properties['Precio ($) por Kg - Promedio Año País']).replace(/'/g, '\'').replace(/"/g, '&quot;').toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="Precio ($) por Kg - Promedio Año País">' + (feature.properties['Precio ($) por Kg - Promedio Año País'] !== null ? autolinker.link(String(feature.properties['Precio ($) por Kg - Promedio Año País']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -220,7 +220,7 @@
         }
 
         function style_Precios_por_Departamento_2_0(feature) {
-            if (feature.properties['Precios por departamento_$ por Kg'] >= 3608.000000 && feature.properties['Precios por departamento_$ por Kg'] <= 3608.000000 ) {
+            if (feature.properties['Precio ($) por Kg'] >= 3775.000000 && feature.properties['Precio ($) por Kg'] <= 3927.000000 ) {
                 return {
                 pane: 'pane_Precios_por_Departamento_2',
                 opacity: 1,
@@ -235,7 +235,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['Precios por departamento_$ por Kg'] >= 3608.000000 && feature.properties['Precios por departamento_$ por Kg'] <= 4100.000000 ) {
+            if (feature.properties['Precio ($) por Kg'] >= 3927.000000 && feature.properties['Precio ($) por Kg'] <= 4614.000000 ) {
                 return {
                 pane: 'pane_Precios_por_Departamento_2',
                 opacity: 1,
@@ -250,7 +250,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['Precios por departamento_$ por Kg'] >= 4100.000000 && feature.properties['Precios por departamento_$ por Kg'] <= 4610.000000 ) {
+            if (feature.properties['Precio ($) por Kg'] >= 4614.000000 && feature.properties['Precio ($) por Kg'] <= 4950.000000 ) {
                 return {
                 pane: 'pane_Precios_por_Departamento_2',
                 opacity: 1,
@@ -265,7 +265,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['Precios por departamento_$ por Kg'] >= 4610.000000 && feature.properties['Precios por departamento_$ por Kg'] <= 5033.000000 ) {
+            if (feature.properties['Precio ($) por Kg'] >= 4950.000000 && feature.properties['Precio ($) por Kg'] <= 5256.000000 ) {
                 return {
                 pane: 'pane_Precios_por_Departamento_2',
                 opacity: 1,
@@ -296,7 +296,7 @@
         bounds_group.addLayer(layer_Precios_por_Departamento_2);
         map.addLayer(layer_Precios_por_Departamento_2);
         var overlaysTree = [
-            {label: 'Precios_por_Departamento<br /><table><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_360836080.png" /></td><td>3608 - 3608</td></tr><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_360841001.png" /></td><td>3608 - 4100</td></tr><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_410046102.png" /></td><td>4100 - 4610</td></tr><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_461050333.png" /></td><td>4610 - 5033</td></tr></table>', layer: layer_Precios_por_Departamento_2},
+            {label: 'Precios_por_Departamento<br /><table><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_377539270.png" /></td><td>3775 - 3927</td></tr><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_392746141.png" /></td><td>3927 - 4614</td></tr><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_461449502.png" /></td><td>4614 - 4950</td></tr><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_495052563.png" /></td><td>4950 - 5256</td></tr></table>', layer: layer_Precios_por_Departamento_2},
             {label: '<img src="legend/Lmite_Departamental_1.png" /> Límite_Departamental ', layer: layer_Lmite_Departamental_1},
             {label: "OSM Standard", layer: layer_OSMStandard_0},]
         var lay = L.control.layers.tree(null, overlaysTree,{
