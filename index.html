@@ -57,7 +57,7 @@
         }
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[-5.001567267561458,-86.46993645622622],[14.167387884097508,-57.53568228000364]]);
+        }).fitBounds([[-5.00146828925397,-90.00518743633954],[14.167102589370984,-54.07795719480257]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -220,7 +220,7 @@
         }
 
         function style_Precios_por_Departamento_2_0(feature) {
-            if (feature.properties['Precio ($) por Kg'] >= 4500.000000 && feature.properties['Precio ($) por Kg'] <= 4640.000000 ) {
+            if (feature.properties['Precio ($) por Kg'] >= 4367.000000 && feature.properties['Precio ($) por Kg'] <= 4667.000000 ) {
                 return {
                 pane: 'pane_Precios_por_Departamento_2',
                 opacity: 1,
@@ -235,7 +235,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['Precio ($) por Kg'] >= 4640.000000 && feature.properties['Precio ($) por Kg'] <= 5182.000000 ) {
+            if (feature.properties['Precio ($) por Kg'] >= 4667.000000 && feature.properties['Precio ($) por Kg'] <= 5085.000000 ) {
                 return {
                 pane: 'pane_Precios_por_Departamento_2',
                 opacity: 1,
@@ -250,7 +250,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['Precio ($) por Kg'] >= 5182.000000 && feature.properties['Precio ($) por Kg'] <= 5500.000000 ) {
+            if (feature.properties['Precio ($) por Kg'] >= 5085.000000 && feature.properties['Precio ($) por Kg'] <= 5450.000000 ) {
                 return {
                 pane: 'pane_Precios_por_Departamento_2',
                 opacity: 1,
@@ -265,7 +265,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['Precio ($) por Kg'] >= 5500.000000 && feature.properties['Precio ($) por Kg'] <= 5827.000000 ) {
+            if (feature.properties['Precio ($) por Kg'] >= 5450.000000 && feature.properties['Precio ($) por Kg'] <= 5717.000000 ) {
                 return {
                 pane: 'pane_Precios_por_Departamento_2',
                 opacity: 1,
@@ -296,7 +296,7 @@
         bounds_group.addLayer(layer_Precios_por_Departamento_2);
         map.addLayer(layer_Precios_por_Departamento_2);
         var overlaysTree = [
-            {label: 'Precios_por_Departamento<br /><table><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_450046400.png" /></td><td>4500 - 4640</td></tr><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_464051821.png" /></td><td>4640 - 5182</td></tr><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_518255002.png" /></td><td>5182 - 5500</td></tr><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_550058273.png" /></td><td>5500 - 5827</td></tr></table>', layer: layer_Precios_por_Departamento_2},
+            {label: 'Precios_por_Departamento<br /><table><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_436746670.png" /></td><td>4367 - 4667</td></tr><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_466750851.png" /></td><td>4667 - 5085</td></tr><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_508554502.png" /></td><td>5085 - 5450</td></tr><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_545057173.png" /></td><td>5450 - 5717</td></tr></table>', layer: layer_Precios_por_Departamento_2},
             {label: '<img src="legend/Lmite_Departamental_1.png" /> Límite_Departamental ', layer: layer_Lmite_Departamental_1},
             {label: "OSM Standard", layer: layer_OSMStandard_0},]
         var lay = L.control.layers.tree(null, overlaysTree,{
