@@ -61,7 +61,7 @@
         }
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[-5.001530298555051,-87.96503666611234],[14.167281324727508,-56.07142807599888]]);
+        }).fitBounds([[-5.001469673156059,-89.74991078429821],[14.167106578323422,-54.32710602281945]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -79,20 +79,53 @@
          }
          return tempDiv.innerHTML;
         }
-        // add class to format popup if it contains media
-		function addClassToPopupIfMedia(content, popup) {
-			var tempDiv = document.createElement('div');
-			tempDiv.innerHTML = content;
-			if (tempDiv.querySelector('td img')) {
-				popup._contentNode.classList.add('media');
-					// Delay to force the redraw
-					setTimeout(function() {
-						popup.update();
-					}, 10);
-			} else {
-				popup._contentNode.classList.remove('media');
-			}
-		}
+        // modify popup if contains media
+        function addClassToPopupIfMedia(content, popup) {
+            var tempDiv = document.createElement('div');
+            tempDiv.innerHTML = content;
+            var imgTd = tempDiv.querySelector('td img');
+            if (imgTd) {
+                var src = imgTd.getAttribute('src');
+                if (/\.(jpg|jpeg|png|gif|bmp|webp|avif)$/i.test(src)) {
+                    popup._contentNode.classList.add('media');
+                    setTimeout(function() {
+                        popup.update();
+                    }, 10);
+                } else if (/\.(mp3|wav|ogg|aac)$/i.test(src)) {
+                    var audio = document.createElement('audio');
+                    audio.controls = true;
+                    audio.src = src;
+                    imgTd.parentNode.replaceChild(audio, imgTd);
+                    popup._contentNode.classList.add('media');
+                    setTimeout(function() {
+                        popup.setContent(tempDiv.innerHTML);
+                        popup.update();
+                    }, 10);
+                } else if (/\.(mp4|webm|ogg|mov)$/i.test(src)) {
+                    var video = document.createElement('video');
+                    video.controls = true;
+                    video.src = src;
+                    video.style.width = "400px";
+                    video.style.height = "300px";
+                    video.style.maxHeight = "60vh";
+                    video.style.maxWidth = "60vw";
+                    imgTd.parentNode.replaceChild(video, imgTd);
+                    popup._contentNode.classList.add('media');
+                    // Aggiorna il popup quando il video carica i metadati
+                    video.addEventListener('loadedmetadata', function() {
+                        popup.update();
+                    });
+                    setTimeout(function() {
+                        popup.setContent(tempDiv.innerHTML);
+                        popup.update();
+                    }, 10);
+                } else {
+                    popup._contentNode.classList.remove('media');
+                }
+            } else {
+                popup._contentNode.classList.remove('media');
+            }
+        }
         var title = new L.Control({'position':'topright'});
         title.onAdd = function (map) {
             this._div = L.DomUtil.create('div', 'info');
@@ -255,7 +288,7 @@
         }
 
         function style_Precios_por_Departamento_2_0(feature) {
-            if (feature.properties['Precio ($) por Kg'] >= 3767.000000 && feature.properties['Precio ($) por Kg'] <= 3860.000000 ) {
+            if (feature.properties['Precio ($) por Kg'] >= 3800.000000 && feature.properties['Precio ($) por Kg'] <= 3800.000000 ) {
                 return {
                 pane: 'pane_Precios_por_Departamento_2',
                 opacity: 1,
@@ -270,7 +303,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['Precio ($) por Kg'] >= 3860.000000 && feature.properties['Precio ($) por Kg'] <= 4503.000000 ) {
+            if (feature.properties['Precio ($) por Kg'] >= 3800.000000 && feature.properties['Precio ($) por Kg'] <= 4437.000000 ) {
                 return {
                 pane: 'pane_Precios_por_Departamento_2',
                 opacity: 1,
@@ -285,7 +318,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['Precio ($) por Kg'] >= 4503.000000 && feature.properties['Precio ($) por Kg'] <= 4970.000000 ) {
+            if (feature.properties['Precio ($) por Kg'] >= 4437.000000 && feature.properties['Precio ($) por Kg'] <= 4931.000000 ) {
                 return {
                 pane: 'pane_Precios_por_Departamento_2',
                 opacity: 1,
@@ -300,7 +333,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['Precio ($) por Kg'] >= 4970.000000 && feature.properties['Precio ($) por Kg'] <= 5367.000000 ) {
+            if (feature.properties['Precio ($) por Kg'] >= 4931.000000 && feature.properties['Precio ($) por Kg'] <= 5300.000000 ) {
                 return {
                 pane: 'pane_Precios_por_Departamento_2',
                 opacity: 1,
@@ -331,7 +364,7 @@
         bounds_group.addLayer(layer_Precios_por_Departamento_2);
         map.addLayer(layer_Precios_por_Departamento_2);
         var overlaysTree = [
-            {label: 'Precios_por_Departamento<br /><table><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_376738600.png" /></td><td>3767 - 3860</td></tr><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_386045031.png" /></td><td>3860 - 4503</td></tr><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_450349702.png" /></td><td>4503 - 4970</td></tr><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_497053673.png" /></td><td>4970 - 5367</td></tr></table>', layer: layer_Precios_por_Departamento_2},
+            {label: 'Precios_por_Departamento<br /><table><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_380038000.png" /></td><td>3800 - 3800</td></tr><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_380044371.png" /></td><td>3800 - 4437</td></tr><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_443749312.png" /></td><td>4437 - 4931</td></tr><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_493153003.png" /></td><td>4931 - 5300</td></tr></table>', layer: layer_Precios_por_Departamento_2},
             {label: '<img src="legend/Lmite_Departamental_1.png" /> Límite_Departamental ', layer: layer_Lmite_Departamental_1},
             {label: "OSM Standard", layer: layer_OSMStandard_0},]
         var lay = L.control.layers.tree(null, overlaysTree,{
@@ -405,6 +438,6 @@
         } else {
             document.getElementsByClassName('search-button')[1].className += ' fa fa-binoculars';
         }
-        </script>
+        </script>        
     </body>
 </html>
