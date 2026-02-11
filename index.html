@@ -288,7 +288,7 @@
         }
 
         function style_Precios_por_Departamento_2_0(feature) {
-            if (feature.properties['Precio ($) por Kg'] >= 3730.000000 && feature.properties['Precio ($) por Kg'] <= 3883.000000 ) {
+            if (feature.properties['Precio ($) por Kg'] >= 3416.000000 && feature.properties['Precio ($) por Kg'] <= 3680.000000 ) {
                 return {
                 pane: 'pane_Precios_por_Departamento_2',
                 opacity: 1,
@@ -303,7 +303,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['Precio ($) por Kg'] >= 3883.000000 && feature.properties['Precio ($) por Kg'] <= 4194.000000 ) {
+            if (feature.properties['Precio ($) por Kg'] >= 3680.000000 && feature.properties['Precio ($) por Kg'] <= 4250.000000 ) {
                 return {
                 pane: 'pane_Precios_por_Departamento_2',
                 opacity: 1,
@@ -318,7 +318,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['Precio ($) por Kg'] >= 4194.000000 && feature.properties['Precio ($) por Kg'] <= 4667.000000 ) {
+            if (feature.properties['Precio ($) por Kg'] >= 4250.000000 && feature.properties['Precio ($) por Kg'] <= 4541.000000 ) {
                 return {
                 pane: 'pane_Precios_por_Departamento_2',
                 opacity: 1,
@@ -333,7 +333,7 @@
                 interactive: true,
             }
             }
-            if (feature.properties['Precio ($) por Kg'] >= 4667.000000 && feature.properties['Precio ($) por Kg'] <= 5062.000000 ) {
+            if (feature.properties['Precio ($) por Kg'] >= 4541.000000 && feature.properties['Precio ($) por Kg'] <= 4952.000000 ) {
                 return {
                 pane: 'pane_Precios_por_Departamento_2',
                 opacity: 1,
@@ -364,7 +364,7 @@
         bounds_group.addLayer(layer_Precios_por_Departamento_2);
         map.addLayer(layer_Precios_por_Departamento_2);
         var overlaysTree = [
-            {label: 'Precios_por_Departamento<br /><table><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_373038830.png" /></td><td>3730 - 3883</td></tr><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_388341941.png" /></td><td>3883 - 4194</td></tr><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_419446672.png" /></td><td>4194 - 4667</td></tr><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_466750623.png" /></td><td>4667 - 5062</td></tr></table>', layer: layer_Precios_por_Departamento_2},
+            {label: 'Precios_por_Departamento<br /><table><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_341636800.png" /></td><td>3416 - 3680</td></tr><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_368042501.png" /></td><td>3680 - 4250</td></tr><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_425045412.png" /></td><td>4250 - 4541</td></tr><tr><td style="text-align: center;"><img src="legend/Precios_por_Departamento_2_454149523.png" /></td><td>4541 - 4952</td></tr></table>', layer: layer_Precios_por_Departamento_2},
             {label: '<img src="legend/Lmite_Departamental_1.png" /> Límite_Departamental ', layer: layer_Lmite_Departamental_1},
             {label: "OSM Standard", layer: layer_OSMStandard_0},]
         var lay = L.control.layers.tree(null, overlaysTree,{
